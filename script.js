@@ -21,6 +21,15 @@ btn.onclick = () => {
     }
 };
 
+//Function for initSite if there is a 
+//color saved i localStorage that color 
+//will be set as backgroundColor in initSite
+(function initSite() {
+      const color = localStorage.getItem ("color");
+    if (color){
+        document.body.style.backgroundColor = color;
+    }
+})();
 
 //Function that render validColors on browser
 //As an ul with li forEach color
@@ -35,13 +44,6 @@ btn.onclick = () => {
 
     div.appendChild(ul);
 })();
-
-
-
-
-
-
-
 
 
 
